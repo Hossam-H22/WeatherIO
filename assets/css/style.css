@@ -401,6 +401,14 @@ body {
   font-size: var(--label-2);
 }
 
+.fade-in {
+  animation: fade-in 250ms ease forwards;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 
 
@@ -1296,9 +1304,39 @@ article.container::before {
   /**
   * MAIN 
   */
+  main {
+    height: calc(100vh-120px);
+    height: calc(100svh-120px);
+  }
 
+  .article.container {
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 40px;
+  }  
 
-  
+  .current-weather .weather-icon {
+    width: 80px;
+  }
+
+  .forecast-card .title-2 {
+    --title-2: 2.2rem;
+  }
+
+  .hightlight-card:nth-child(-n+2) {
+    height: 200px;
+  }
+
+  .hightlight-card:nth-child(n+3) {
+    height: 150px;
+  }
+
+  .hightlight-card .m-icon {
+    font-size: 4.8rem;
+  }
+
+  .slider-list {
+    gap: 16px;
+  }
 
 
 
@@ -1307,4 +1345,13 @@ article.container::before {
 
 
 
+/*
+* responsive for large than 1400px screen
+*/
+@media (min-width: 1400px) {
 
+  .hightlight-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
