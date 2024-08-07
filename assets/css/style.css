@@ -1101,7 +1101,7 @@ article.container::before {
 
   article.container {
     padding-block-start: 0;
-    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-columns: 310px minmax(0, 1fr);
     align-items: flex-start;
     gap: 24px;
   }
